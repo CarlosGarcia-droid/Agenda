@@ -20,7 +20,7 @@ CREATE TABLE Grupo (
 );
 
 CREATE TABLE Pertenece (
-  codigo_grupo VARCHAR(50) NOT NULL,
+  codigo_grupo VARCHAR(50) PRIMARY KEY,
   codigo_usuario VARCHAR(50) NOT NULL,
   FOREIGN KEY (codigo_grupo) REFERENCES Grupo (codigo) ON DELETE CASCADE ON UPDATE CASCADE,
   FOREIGN KEY (codigo_usuario) REFERENCES Usuario (codigo) ON DELETE CASCADE ON UPDATE CASCADE
