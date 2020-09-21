@@ -29,7 +29,8 @@ CREATE TABLE Pertenece (
 CREATE TABLE Tarea (
   codigo VARCHAR(50) PRIMARY KEY,
   descripcion VARCHAR(1000),
-  fehca DATE,
+  fehca_ini DATE,
+  fecha_fin DATE,
   codigo_grupo VARCHAR(50) NOT NULL,
   codigo_usuario VARCHAR(50) NOT NULL,
   FOREIGN KEY (codigo_grupo) REFERENCES Grupo (codigo) ON DELETE CASCADE ON UPDATE CASCADE,
