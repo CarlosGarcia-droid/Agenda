@@ -6,4 +6,4 @@ class Tarea(models.Model):
     codigo_usuario = models.ForeignKey('User')#Duda si se hace asi
     fecha_ini = models.DateField()
     fecha_fin = models.DateField() #Al crear la tarea la inciamos a null?
-    codigo_grupo = models.ForeignKey('Grupo')#Duda si se hace asi
+    codigo_grupo = models.ForeignKey('Grupo', on_delete=models.CASCADE)#Duda si se hace asi
